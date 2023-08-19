@@ -1,0 +1,41 @@
+/* HamburgerMenu.css */
+/* .hamburger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+} */
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 7px);
+}
+
+.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.items {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.open .items {
+  display: block;
+}
+
+.menu-items li {
+  margin: 10px 0;
+  font-size: 18px;
+}

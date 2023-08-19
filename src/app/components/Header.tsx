@@ -1,10 +1,15 @@
 import Link from 'next/link';
+import HamburgerMenu from './Hamburger';
 
 export default function Header() {
   return (
     <header>
-      <nav>
-        <ul className="flex justify-end items-center space-x-4 bg-gray-300 mb-4 p-4" style={{ height: "100px" }}>
+      <HamburgerMenu />
+      <nav className="hidden md:block">
+        <ul
+          className="flex justify-end items-center space-x-4 bg-gray-300 mb-4 p-4"
+          style={{ height: '100px' }}
+        >
           <li>
             <Link href="/">Home</Link>
           </li>
