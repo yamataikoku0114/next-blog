@@ -1,4 +1,8 @@
 import Image from 'next/image';
+import { test } from '../../lib/api';
+
+const result = test();
+console.log(result);
 
 export default function Home() {
   return (
