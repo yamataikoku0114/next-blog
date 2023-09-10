@@ -1,21 +1,15 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { getAllPosts } from '../../../lib/api';
-import Post from '../../../interfaces/post';
+import { cache } from 'react';
 
-type Props = {
-  allPosts: Post[];
-};
-
-export const getData = () => {
+export const getData = cache(async () => {
   const allPosts = getAllPosts(['slug', 'title', 'date']);
-  return { props: { allPosts } };
-};
+  return Promise.all(allPosts);
+});
 
-const result = getData();
-console.log(result);
-
-export default function PostLists({ allPosts }: Props) {
+export default async function PostLists() {
+  const allPosts = await getData();
   return (
     <div>
       <Head>
