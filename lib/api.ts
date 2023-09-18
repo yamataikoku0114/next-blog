@@ -16,6 +16,10 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
+export type Items = {
+  [key: string]: string;
+};
+
 export function getPostBySlug(slug: string, fields: string[] = []) {
   // slugの.mdを空文字に置き換える
   const realSlug = slug.replace(/\.md$/, '');
@@ -27,9 +31,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   // mdファイルのフロントマターとコンテンツを抽出
   const { data, content } = matter(fileContents);
 
-  type Items = {
-    [key: string]: string;
-  };
+  
 
   const items: Items = {};
 
@@ -60,7 +62,3 @@ export function getAllPosts(fields: string[] = []) {
   return posts;
 }
 
-export function test() {
-  const allPosts = getAllPosts(['slug', 'title', 'date', 'tags']);
-  return allPosts;
-}

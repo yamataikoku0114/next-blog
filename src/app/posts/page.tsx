@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { getAllPosts } from '../../../lib/api';
 import { cache } from 'react';
 
-export const getData = cache(async () => {
+export const getData = cache(() => {
   const allPosts = getAllPosts(['slug', 'title', 'date']);
-  return Promise.all(allPosts);
+  return allPosts;
 });
 
-export default async function PostLists() {
-  const allPosts = await getData();
+export default function PostLists() {
+  const allPosts = getData();
   return (
     <div>
       <Head>
