@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import { test } from '../../lib/api';
-
 export default function Home() {
   return (
     <div>
