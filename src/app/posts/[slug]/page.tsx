@@ -1,25 +1,25 @@
-import { getPostBySlug, getAllPosts } from '../../../../lib/api';
+import React from 'react';
+import { getPostBySlug } from '../../../../lib/api';
 import { cache } from 'react';
-import type PostType from '../../../../interfaces/post';
-import type { Items } from '../../../../lib/api';
-
+import markdownToHtml from '../../../../lib/markdownToHtml';
 
 const getData = cache((slug: string) => {
   const post = getPostBySlug(slug, ['slug', 'title', 'date', 'content']);
   return post;
 });
 
-export default function Post({ params }: { params: { slug: string } }) {
+export default async function Post({ params }: { params: { slug: string } }) {
   const post = getData(params.slug);
+  const content = await markdownToHtml(post.content);
   return (
-    <div>
+    <article className="prose prose-slate">
       <h1>記事詳細</h1>
       <div>
         <div>{post.title}</div>
         <div>{post.date}</div>
-        <div>{post.content}</div>
+        <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
-      <p>記事のスラッグ: {post.slug}</p>
-    </div>
+      記事のスラッグ: {post.slug}
+    </article>
   );
 }
