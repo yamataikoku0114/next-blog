@@ -16,7 +16,7 @@ export default function PostLists() {
           <div>
             {allPosts.map((post) => (
               <Link href={`/posts/${post.slug}`} key={post.slug}>
-                <div className="bg-white p-4 shadow-md rounded-md mb-4">
+                <div className="p-4 shadow-md rounded-md mb-4 dark:bg-slate-500">
                   <h2>{post.title}</h2>
                   <p>タグ</p>
                   <p>投稿詳細</p>

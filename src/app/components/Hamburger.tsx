@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import '../HamburgerMenu.css';
 import Link from 'next/link';
+import { ModeToggle } from './modeToggle';
 
 function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,7 @@ function HamburgerMenu() {
   return (
     <div className="hamburger-menu md:hidden">
       <div className="flex justify-end bg-gray-400 p-3">
+        <ModeToggle />
         <div
           className={`menu-icon ${
             isOpen ? 'open' : ''
@@ -36,19 +38,29 @@ function HamburgerMenu() {
       >
         <ul className="items">
           <li>
-            <Link href="/" onClick={toggleMenu}>Home</Link>
+            <Link href="/" onClick={toggleMenu}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/about" onClick={toggleMenu}>About</Link>
+            <Link href="/about" onClick={toggleMenu}>
+              About
+            </Link>
           </li>
           <li>
-            <Link href="/posts" onClick={toggleMenu}>Posts</Link>
+            <Link href="/posts" onClick={toggleMenu}>
+              Posts
+            </Link>
           </li>
           <li>
-            <Link href="/tags" onClick={toggleMenu}>Tags</Link>
+            <Link href="/tags" onClick={toggleMenu}>
+              Tags
+            </Link>
           </li>
           <li>
-            <Link href="/contact" onClick={toggleMenu}>Contact</Link>
+            <Link href="/contact" onClick={toggleMenu}>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

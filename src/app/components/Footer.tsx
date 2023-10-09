@@ -4,7 +4,7 @@ import { BsTwitter } from 'react-icons/bs';
 
 export default function Footer() {
   return (
-    <footer className="grid place-items-center bg-gray-300" style={{ height: "100px" }}>
+    <footer className="grid place-items-center" style={{ height: '100px' }}>
       <nav>
         <ul className="flex justify-center space-x-4">
           <li>
