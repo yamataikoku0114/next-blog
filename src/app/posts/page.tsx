@@ -1,12 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { getAllPosts } from '../../../lib/api';
-import { cache } from 'react';
-
-export const getData = cache(() => {
-  const allPosts = getAllPosts(['slug', 'title', 'date']);
-  return allPosts;
-});
+import { getData } from '../../../lib/getData';
 
 export default function PostLists() {
   const allPosts = getData();
