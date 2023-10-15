@@ -3,32 +3,33 @@ title: 'post-1'
 date: '2023/08/19'
 ---
 
-# 【Next.js 13.4】next-themesとTailwind CSSでダークモードの実装
+# 【Next.js 13.4】next-themes と Tailwind CSS でダークモードの実装
 
 作成日: 2023/10/09
 技術タグ: Next.js
-最終更新: 2023年10月9日 21:33
+最終更新: 2023 年 10 月 9 日 21:33
 
 ## 概要
 
-Next.jsで作成しているブログにダークモードを実装しました。
+Next.js で作成しているブログにダークモードを実装しました。
 
 ## 手順
 
-### next-themesのインストール
+### next-themes のインストール
 
 ```bash
 npm install next-themes
 ```
 
-### Tailwindのダークモードを有効化する
+### Tailwind のダークモードを有効化する
 
 `tailwind.config.js`の`darkMode`に`class`か`media`を指定する
 
 - `media`を設定した場合
-    - OSの設定に基づいて、自動でdarkモードに切り替えてくれる
+  - OS の設定に基づいて、自動で dark モードに切り替えてくれる
 - `class`を設定した場合
-    - ユーザーがページ上でON/OFFの切り替えができる
+
+  - ユーザーがページ上で ON/OFF の切り替えができる
 
 - tailwind.config.js
 
@@ -56,23 +57,23 @@ const config: Config = {
 export default config;
 ```
 
-### ThemeProviderのセットアップ
+### ThemeProvider のセットアップ
 
 - src/app/components/themeProviders
 
 ```tsx
-"use client"
+'use client';
 
-import * as React from "react"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
-import type { ThemeProviderProps } from "next-themes/dist/types"
+import * as React from 'react';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import type { ThemeProviderProps } from 'next-themes/dist/types';
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }
 ```
 
-### ThemeProviderをlayout.tsxに読み込み
+### ThemeProvider を layout.tsx に読み込み
 
 - src/layout.tsx
 
@@ -100,7 +101,7 @@ export default function RootLayout({
 }
 ```
 
-### Light/Darkモードを切り替えるコンポーネントを作成
+### Light/Dark モードを切り替えるコンポーネントを作成
 
 アイコンは[react-icons](https://react-icons.github.io/react-icons/)を使用
 
@@ -133,11 +134,13 @@ export function ModeToggle() {
 
 ## 結果
 
-- クライアントサイドのhtml要素に現在のモードが表示される
-- dark:~でdarkモードのCSSを当てていくことができる
+- クライアントサイドの html 要素に現在のモードが表示される
+- dark:~で dark モードの CSS を当てていくことができる
 
 ![Untitled](%E3%80%90Next%20js%2013%204%E3%80%91next-themes%E3%81%A8Tailwind%20CSS%E3%81%A6%E3%82%99%E3%82%BF%E3%82%99%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%88%E3%82%99%E3%81%AE%E5%AE%9F%20b9ceafb0c42f4d1dba71f2281e0f1814/Untitled.png)
 
 - ローカルストレージに現在のモードが保存される
 
 ![Untitled](%E3%80%90Next%20js%2013%204%E3%80%91next-themes%E3%81%A8Tailwind%20CSS%E3%81%A6%E3%82%99%E3%82%BF%E3%82%99%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%88%E3%82%99%E3%81%AE%E5%AE%9F%20b9ceafb0c42f4d1dba71f2281e0f1814/Untitled%201.png)
+
+#### h4タグテスト
