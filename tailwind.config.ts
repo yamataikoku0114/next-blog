@@ -31,6 +31,30 @@ const config: Config = {
             },
           },
         },
+        invert: {
+          css: {
+            code: {
+              backgroundColor: 'gray',
+            },
+            pre: {
+              color: 'var(--tw-prose-pre-code)',
+              backgroundColor: 'var(--tw-prose-pre-bg)',
+              overflowX: 'auto',
+              fontWeight: '400',
+            },
+            'pre code': {
+              backgroundColor: 'transparent',
+              borderWidth: '0',
+              borderRadius: '0',
+              padding: '0',
+              fontWeight: 'inherit',
+              color: 'inherit',
+              fontSize: 'inherit',
+              fontFamily: 'inherit',
+              lineHeight: 'inherit',
+            },
+          },
+        },
       },
     },
   },
