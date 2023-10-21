@@ -37,8 +37,8 @@ const config: Config = {
               backgroundColor: 'gray',
             },
             pre: {
-              color: 'var(--tw-prose-pre-code)',
-              backgroundColor: 'var(--tw-prose-pre-bg)',
+              color: 'white',
+              backgroundColor: 'gray',
               overflowX: 'auto',
               fontWeight: '400',
             },
