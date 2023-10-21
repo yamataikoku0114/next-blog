@@ -29,6 +29,9 @@ const config: Config = {
             'code::after': {
               content: 'none',
             },
+            'ul > li::marker': {
+              color: '#1f2937',
+            },
           },
         },
         invert: {
@@ -52,6 +55,9 @@ const config: Config = {
               fontSize: 'inherit',
               fontFamily: 'inherit',
               lineHeight: 'inherit',
+            },
+            'ul > li::marker': {
+              color: 'var(--tw-prose-bullets)',
             },
           },
         },
