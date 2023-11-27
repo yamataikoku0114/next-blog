@@ -13,13 +13,10 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const content = await markdownToHtml(post.content);
   return (
     <article className="prose dark:prose-invert">
-      <h1>記事詳細</h1>
+      <h1>{post.title}</h1>
       <div>
-        <div>{post.title}</div>
-        <div>{post.date}</div>
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
-      記事のスラッグ: {post.slug}
     </article>
   );
 }

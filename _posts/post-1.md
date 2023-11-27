@@ -1,13 +1,18 @@
 ---
-title: 'post-1'
+title: '【Next.js 13.4】next-themes と Tailwind CSS でダークモードの実装'
 date: '2023/08/19'
+tags: 
+  - JavaScript
+  - Next.js
 ---
-
-# 【Next.js 13.4】next-themes と Tailwind CSS でダークモードの実装
 
 作成日: 2023/10/09
 技術タグ: Next.js
 最終更新: 2023 年 10 月 9 日 21:33
+
+## 目次
+
+Next.js を利用して Markdown のブログサイトを一から作成します。
 
 ## 概要
 
@@ -139,8 +144,10 @@ export function ModeToggle() {
 
 ![Untitled](%E3%80%90Next%20js%2013%204%E3%80%91next-themes%E3%81%A8Tailwind%20CSS%E3%81%A6%E3%82%99%E3%82%BF%E3%82%99%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%88%E3%82%99%E3%81%AE%E5%AE%9F%20b9ceafb0c42f4d1dba71f2281e0f1814/Untitled.png)
 
+![ネクスト](/posts/post-1/next.svg)
+
 - ローカルストレージに現在のモードが保存される
 
 ![Untitled](%E3%80%90Next%20js%2013%204%E3%80%91next-themes%E3%81%A8Tailwind%20CSS%E3%81%A6%E3%82%99%E3%82%BF%E3%82%99%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%88%E3%82%99%E3%81%AE%E5%AE%9F%20b9ceafb0c42f4d1dba71f2281e0f1814/Untitled%201.png)
 
-#### h4タグテスト
+#### h4 タグテスト
