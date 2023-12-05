@@ -4,7 +4,7 @@ import { cache } from 'react';
 import markdownToHtml from '../../../../lib/markdownToHtml';
 
 const getData = cache((slug: string) => {
-  const post = getPostBySlug(slug, ['slug', 'title', 'date', 'content']);
+  const post = getPostBySlug(slug);
   return post;
 });
 
