@@ -1,9 +1,9 @@
 import { getPostsByTag } from '../../../../lib/getPostsByTag';
 
-export default function TagLists() {
+export default function TagLists({ params }: { params: { tag: string } }) {
   // パスの値をgetTagListに渡す
-  const posts = getPostsByTag('JavaScript');
-  console.log('6', posts);
+  console.log(params);
+  const posts = getPostsByTag(params.tag);
   return (
     <div className="p-4">
       <div className="text-2xl font-bold mb-4">タグ一覧</div>

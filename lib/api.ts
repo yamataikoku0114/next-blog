@@ -29,13 +29,16 @@ export function getPostBySlug(slug: string) {
   };
 }
 
-export function getAllPosts(fields: string[] = [], filterString: string) {
+export function getAllPosts(filterString?: string) {
   const slugs = getPostSlugs();
   const posts = slugs
     .filter((slug) => slug !== '.DS_Store')
     .map((slug) => getPostBySlug(slug))
     // 投稿の日付で降順ソート
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  if (typeof filterString === 'undefined') {
+    return posts;
+  }
   return posts.filter((post) => {
     return post.tags.some((tag) => {
       return tag === filterString;
