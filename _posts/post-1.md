@@ -1,7 +1,7 @@
 ---
 title: '【Next.js 13.4】next-themes と Tailwind CSS でダークモードの実装'
 date: '2023/08/19'
-tags: 
+tags:
   - JavaScript
   - Next.js
 ---
