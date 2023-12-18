@@ -21,6 +21,7 @@ export default function PostLists() {
                   <p>タグ</p>
                   <p>投稿詳細</p>
                   <p>{post.date}</p>
+                  <p>{post.tags}</p>
                 </div>
               </Link>
             ))}
