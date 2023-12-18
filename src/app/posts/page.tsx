@@ -15,22 +15,28 @@ export default function PostLists() {
         {allPosts && (
           <div>
             {allPosts.map((post) => (
-              <Link href={`/posts/${post.slug}`} key={post.slug}>
-                <div className="p-4 shadow-md rounded-md mb-4 dark:bg-slate-500">
-                  <h2>{post.title}</h2>
-                  <p>タグ</p>
-                  <p>投稿詳細</p>
-                  <p>{post.date}</p>
+              <div
+                className="p-4 shadow-md rounded-md mb-4 dark:bg-slate-500"
+                key={post.slug}
+              >
+                <Link href={`/posts/${post.slug}`}>
+                  <h2 className="text-2xl text-blue-600 hover:text-blue-900">
+                    {post.title}
+                  </h2>
+                </Link>
+                <p className="p-2">{post.date}</p>
+                <div className="p-4">
                   {post.tags.map((tag) => (
-                    <p
+                    <Link
+                      href={`/tags/${tag}`}
                       key={tag}
-                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-2"
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded-full m-2"
                     >
                       {tag}
-                    </p>
+                    </Link>
                   ))}
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         )}
