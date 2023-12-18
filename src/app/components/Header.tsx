@@ -22,9 +22,6 @@ export default function Header() {
             <Link href="/posts">Posts</Link>
           </li>
           <li>
-            <Link href="/tags">Tags</Link>
-          </li>
-          <li>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
