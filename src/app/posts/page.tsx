@@ -21,9 +21,14 @@ export default function PostLists() {
                   <p>タグ</p>
                   <p>投稿詳細</p>
                   <p>{post.date}</p>
-                  <p className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-2">
-                    {post.tags}
-                  </p>
+                  {post.tags.map((tag) => (
+                    <p
+                      key={tag}
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-2"
+                    >
+                      {tag}
+                    </p>
+                  ))}
                 </div>
               </Link>
             ))}
