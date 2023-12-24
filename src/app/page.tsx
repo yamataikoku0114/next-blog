@@ -8,7 +8,7 @@ export default function Home() {
       <h1 className="text-2xl font-bold mb-4">最近の投稿</h1>
       {allPosts && (
         <div>
-          {allPosts.map((post) => (
+          {allPosts.slice(0, 5).map((post) => (
             <div key={post.slug}>
               <PostCard post={post} />
             </div>
