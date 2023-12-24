@@ -4,7 +4,7 @@ import { PostCard } from '@/app/components/PostCard';
 export default function TagLists({ params }: { params: { tag: string } }) {
   const posts = getPostsByTag(params.tag);
   return (
-    <div className="p-4">
+    <div>
       <main>
         <h1 className="text-2xl font-bold mb-4">記事一覧</h1>
         {posts && (

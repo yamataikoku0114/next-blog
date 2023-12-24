@@ -24,7 +24,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <div className="flex justify-center">{children}</div>
+          <div className="w-3/4 mx-auto">{children}</div>
           <Footer />
         </ThemeProvider>
       </body>
