@@ -4,8 +4,8 @@ export default function About() {
   return (
     <div>
       <h1 className="text-2xl font-bold">About</h1>
-      <div>
-        <div className="flex justify-center mt-4">
+      <div className="flex justify-between">
+        <div>
           <Image
             src="/images/introductionpicture.png"
             alt="自己紹介画像"
@@ -13,11 +13,23 @@ export default function About() {
             height={300}
           />
         </div>
-        <div className="text-3xl font-bold mt-4">
-          山本 泰暉（Yamamoto Taiki）
+        <div>
+          <h1 className="text-3xl font-bold">山本 泰暉（Yamamoto Taiki）</h1>
+          <table>
+            <tr>
+              <td>年齢</td>
+              <td>22歳</td>
+            </tr>
+            <tr>
+              <td>経歴</td>
+              <td>社会人1年目のWebエンジニアです。</td>
+            </tr>
+            <tr>
+              <td>特記実行</td>
+              <td>小学生の頃からテニスをしています。</td>
+            </tr>
+          </table>
         </div>
-        <div>年齢：22歳</div>
-        <div>経歴：社会人1年目のWebエンジニアです。</div>
       </div>
     </div>
   );
