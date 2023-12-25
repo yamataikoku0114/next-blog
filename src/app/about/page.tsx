@@ -3,8 +3,10 @@ import Image from 'next/image';
 export default function About() {
   return (
     <div>
-      <h1 className="text-2xl font-bold">About</h1>
-      <div className="flex justify-between">
+      <div className="my-10">
+        <h1 className="text-3xl font-bold">About</h1>
+      </div>
+      <div className="flex flex-wrap gap-10 justify-center">
         <div>
           <Image
             src="/images/introductionpicture.png"
