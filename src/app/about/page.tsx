@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div>
       <div className="my-10">
-        <h1 className="text-3xl font-bold">About</h1>
+        <h1 className="text-3xl font-bold">自己紹介</h1>
       </div>
       <div className="flex flex-wrap gap-10 justify-center">
         <div>

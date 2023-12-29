@@ -13,16 +13,16 @@ export default function Header() {
         >
           <ModeToggle />
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">最近の投稿</Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about">自己紹介</Link>
           </li>
           <li>
-            <Link href="/posts">Posts</Link>
+            <Link href="/posts">記事一覧</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">お問い合わせ</Link>
           </li>
         </ul>
       </nav>
