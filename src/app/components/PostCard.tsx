@@ -8,7 +8,7 @@ type Props = {
 export const PostCard: React.FC<Props> = ({ post }) => {
   return (
     <div
-      className="p-4 shadow-md rounded-md mb-4 dark:bg-slate-500"
+      className="p-4 shadow-md rounded-md mb-4 dark:bg-slate-400"
       key={post.slug}
     >
       <Link href={`/posts/${post.slug}`}>
